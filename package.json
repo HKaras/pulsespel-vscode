@@ -2,7 +2,7 @@
   "name": "pulsespel-vscode",
   "displayName": "PulseSpel-VScode",
   "description": "A VScode language extension for looking at BRUKER EPR pulsespel files. ",
-  "repository": {"https://github.com/HKaras/pulsespel-vscode"},
+  "repository": {"type": "git","url":"https://github.com/HKaras/pulsespel-vscode"},
   "version": "0.1.0",
   "engines": {
     "vscode": "^1.71.0"
