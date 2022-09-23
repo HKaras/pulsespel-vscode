@@ -1,4 +1,4 @@
-This extension provides synatax highlighting for BRUKERS EPR experiment progamring language: PulseSpel. 
+This extension provides synatax highlighting for BRUKER's EPR experiment progamring language: PulseSpel. 
 ## Features
 
 When working with ".def" and ".exp" files, variable names, functions, control words etc... are highlighted acording to your current VScode theme.
