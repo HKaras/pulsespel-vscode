@@ -12,13 +12,15 @@
 		{"include": "#operators"},
 		{"include": "#exps_lists"},
 		{"include": "#functions"},
-		{"include": "#numbers"}
+		{"include": "#numbers"},
+		{"include": "#det_modes"},
+		{"include": "#ENDOR"}
 	],
 	"repository": {
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.pulsespel",
-				"match": "\\b(begin|end|sweep|shot|for|next|to)\\b"
+				"match": "\\b(begin|end|sweep|shot|for|next|to|Bsweep|Rfsweep)\\b"
 			}]
 		},
 		"strings": {
@@ -116,7 +118,7 @@
 		"functions": {
 			"patterns": [{
 				"name": "entity.name.function",
-				"match": "\\btotscans|scansdone|acq\\b"
+				"match": "\\btotscans|scansdone|acq|Bcstep|Sleep\\b"
 			}]
 		},
 		"numbers": {
@@ -124,6 +126,21 @@
 				"name": "constant.numeric",
 				"match": "\\b[0123456789]+\\b"
 			}]
+		},
+		"det_modes": {
+			"patterns": [{
+				"name": "entity.name.tag",
+				"match": "\\bSPT|INTG|TRANS|QUAD\\b"
+			}]
+		},
+		"ENDOR": {
+			"patterns": [{
+				"name": "constant.language",
+				"match": "\\bDF\\d{1,2}\\b"
+			},{
+				"name": "variable.parameter",
+				"match": "\\bRF1|RF2\\b"
+		}]
 		}
 		
 		},	
