@@ -3,8 +3,8 @@ This extension provides synatax highlighting for BRUKERS EPR experiment progamri
 
 When working with ".def" and ".exp" files, variable names, functions, control words etc... are highlighted acording to your current VScode theme.
 Some Examples
-\!\[Example of ".def" file \]\(images/def_example.png\)
-\!\[Example of ".exp" file \]\(images/exp_example.png\)
+![Example of ".def" file](images/def_example.png)
+![Example of ".exp" file](images/exp_example.png)
 
 > Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
 
