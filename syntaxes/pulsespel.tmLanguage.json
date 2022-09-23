@@ -1,0 +1,131 @@
+{
+	"name": "PulseSpel",
+	"patterns": [
+		{"include": "#keywords"},
+		{"include": "#strings"},
+		{"include": "#comment"},
+		{"include": "#delays"},
+		{"include": "#pulses"},
+		{"include": "#phase_cycles"},
+		{"include": "#phases"},
+		{"include": "#variables"},
+		{"include": "#operators"},
+		{"include": "#exps_lists"},
+		{"include": "#functions"},
+		{"include": "#numbers"}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.pulsespel",
+				"match": "\\b(begin|end|sweep|shot|for|next|to)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.pulsespel",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [{
+					"name": "constant.character.escape.pulsespel",
+					"match": "\\\\."
+				}]
+		},
+		"comment": {
+			"patterns": [{
+				"name": "comment.line.character",
+				"match": "\\;.*"
+			}]
+		},
+		"pulses": {
+			"patterns": [{
+				"name": "entity.name.section",
+				"match": "\\bp\\d{1,2}\\s"
+			},
+			{
+				"name": "entity.name.section",
+				"match": "\\bpg\\b"
+			}]
+		},
+		"delays": {
+			"patterns": [{
+				"name": "constant.language",
+				"match": "\\bd\\d{1,2}\\b"
+			},
+			{
+				"name": "constant.language",
+				"match": "\\bdx|dy|srtu|srt\\b"
+			}]
+		},
+		"variables": {
+			"patterns": [{
+				"name": "variable.parameter",
+				"match": "\\b[^0-9=\\+\\*-]\\b"
+			},{
+				"name": "variable.parameter",
+				"match": "sx|sy|sz"
+			}]
+		},
+		"phase_cycles": {
+			"patterns": [{
+				"name": "variable.parameter",
+				"match": "\\b\\ph\\d{1,2}\\b"
+			},{
+				"name": "variable.parameter",
+				"match": "\\b[a,b]sg1\\b"
+			},{
+				"name": "variable.parameter",
+				"match": "\\bsg1\\b"
+			}]
+		},
+		"operators": {
+			"patterns": [{
+				"name": "keyword.operator",
+				"match": "[\\+=\\*-]"
+			}]
+		},
+		"phases": {
+			"patterns": [{
+				"name": "entity.name.type",
+				"match": "[\\+-]<[xy]>"
+			},{
+				"name": "entity.name.type",
+				"match": "[\\+-][xy]"
+			},{
+				"name": "entity.name.type",
+				"match": "[\\+-][ab]"
+			},{
+				"name": "entity.name.type",
+				"match": "ELDOR"
+			}]
+		},
+		"exps_lists": {
+			"patterns": [{
+				"name": "entity.name.function",
+				"match": "exp\\d*"
+			},{
+				"name": "entity.name.function",
+				"match": "lists\\d*"
+			},{
+				"name": "entity.name.function",
+				"match": "dim\\d*"
+			},{
+				"name": "entity.name.function",
+				"match": "defs"
+			}]
+		},
+		"functions": {
+			"patterns": [{
+				"name": "entity.name.function",
+				"match": "\\btotscans|scansdone|acq\\b"
+			}]
+		},
+		"numbers": {
+			"patterns": [{
+				"name": "constant.numeric",
+				"match": "\\b[0123456789]+\\b"
+			}]
+		}
+		
+		},	
+	"scopeName": "pulsespel.language"
+}

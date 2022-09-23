@@ -1,0 +1,25 @@
+{
+  "name": "pulsespel-vscode",
+  "displayName": "PulseSpel-VScode",
+  "description": "A VScode language extension for looking at BRUKER EPR pulsespel files. ",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.71.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "pulsespel",
+      "aliases": ["PulseSpel", "pulsespel"],
+      "extensions": [".exp",".def"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "pulsespel",
+      "scopeName": "pulsespel.language",
+      "path": "./syntaxes/pulsespel.tmLanguage.json"
+    }]
+  }
+}
