@@ -20,7 +20,7 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.pulsespel",
-				"match": "\\b(begin|end|sweep|shot|for|next|to|Bsweep|Rfsweep)\\b"
+				"match": "\\b(begin|end|sweep|shot|for|next|to|bsweep|rfsweep)\\b"
 			}]
 		},
 		"strings": {
@@ -118,7 +118,7 @@
 		"functions": {
 			"patterns": [{
 				"name": "entity.name.function",
-				"match": "\\btotscans|scansdone|acq|Bcstep|Sleep\\b"
+				"match": "\\btotscans|scansdone|acq|bcstep|sleep\\b"
 			}]
 		},
 		"numbers": {
@@ -139,7 +139,7 @@
 				"match": "\\bDF\\d{1,2}\\b"
 			},{
 				"name": "variable.parameter",
-				"match": "\\bRF1|RF2\\b"
+				"match": "\\brf1|rf2|RF1|RF2\\b"
 		}]
 		}
 		
